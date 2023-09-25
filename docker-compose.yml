@@ -1,0 +1,24 @@
+version: '3.1'
+
+services:
+  php:
+    container_name: symfony
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./server:/var/www/symfony
+    # expose:
+    #   - "9000"
+    ports:
+      - 8000:8000
+  
+  # postgres:
+  #   container_name: weekly-meal-plan-postgres-dev-db
+  #   image: 'postgres:latest'
+  #   ports:
+  #     - '5432:5432'
+  #   environment:
+  #     POSTGRES_DB: weekly-meal-plan
+  #     POSTGRES_USER: postgres
+  #     POSTGRES_PASSWORD: postgres
