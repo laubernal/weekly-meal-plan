@@ -2,15 +2,17 @@
 
 use ValueObject;
 use Ramsey\Uuid\Uuid;
+use IncorrectFormatError;
+use Doctrine\ORM\Mapping\Id;
 
-class Id extends ValueObject
+class IdVo extends ValueObject
 {
     private $_value;
 
     public function __construct(string $value)
     {
         if ($this->validate($value)) {
-            throw new Exception('Incorrect ID format');
+            throw new IncorrectFormatError('Incorrect ID format');
         }
 
         $this->_value = $value;
