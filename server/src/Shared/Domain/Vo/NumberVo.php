@@ -1,5 +1,7 @@
 <?php
 
+use ValueObject;
+
 class NumberVo extends ValueObject
 {
     private $_value;

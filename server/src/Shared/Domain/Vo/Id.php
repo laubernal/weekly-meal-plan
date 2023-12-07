@@ -1,5 +1,6 @@
 <?php
 
+use ValueObject;
 use Ramsey\Uuid\Uuid;
 
 class Id extends ValueObject
