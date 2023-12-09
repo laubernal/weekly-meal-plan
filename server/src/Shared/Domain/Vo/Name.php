@@ -1,7 +1,7 @@
 <?php
 
 use ValueObject;
-use IncorrectFormatError;
+use StringFormatError;
 
 class Name extends ValueObject
 {
@@ -10,7 +10,7 @@ class Name extends ValueObject
     public function __construct(string $value)
     {
         if ($this->validate($value)) {
-            throw new IncorrectFormatError('Incorrect name format');
+            throw new StringFormatError();
         }
 
         $this->_value = $value;

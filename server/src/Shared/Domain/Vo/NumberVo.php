@@ -1,7 +1,7 @@
 <?php
 
 use ValueObject;
-use IncorrectFormatError;
+use NumberFormatError;
 
 class NumberVo extends ValueObject
 {
@@ -10,7 +10,7 @@ class NumberVo extends ValueObject
     public function __construct(int $value)
     {
         if ($this->validate($value)) {
-            throw new IncorrectFormatError('Incorrect number format');
+            throw new NumberFormatError();
         }
 
         $this->_value = $value;

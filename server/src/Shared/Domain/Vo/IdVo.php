@@ -1,8 +1,8 @@
 <?php
 
+use DomainError;
 use ValueObject;
 use Ramsey\Uuid\Uuid;
-use IncorrectFormatError;
 use Doctrine\ORM\Mapping\Id;
 
 class IdVo extends ValueObject
@@ -12,7 +12,7 @@ class IdVo extends ValueObject
     public function __construct(string $value)
     {
         if ($this->validate($value)) {
-            throw new IncorrectFormatError('Incorrect ID format');
+            throw new DomainError('Incorrect ID format');
         }
 
         $this->_value = $value;

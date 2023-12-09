@@ -1,7 +1,7 @@
 <?php
 
 use NumberVo;
-use IncorrectFormatError;
+use NumberFormatError;
 
 class Quantity extends NumberVo
 {
@@ -10,7 +10,7 @@ class Quantity extends NumberVo
     public function __construct(int $value)
     {
         if ($this->validate($value)) {
-            throw new IncorrectFormatError('Incorrect quantity format');
+            throw new NumberFormatError('Incorrect quantity format');
         }
 
         $this->_value = $value;
