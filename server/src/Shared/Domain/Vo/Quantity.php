@@ -1,28 +1,20 @@
 <?php
 
-use NumberVo;
-use NumberFormatError;
+namespace App\Shared\Domain\Vo;
 
-class Quantity extends NumberVo
+class QuantityVo
 {
-    private $_value;
-
-    public function __construct(int $value)
+    public function __construct(private NumberVo $amount, private string $unit)
     {
-        if ($this->validate($value)) {
-            throw new NumberFormatError('Incorrect quantity format');
-        }
-
-        $this->_value = $value;
     }
 
-    protected function validate(mixed $value): bool
+    public function amount(): NumberVo
     {
-        return !$value->is_int();
+        return $this->amount;
     }
 
-    public function value(): int
+    public function unit(): string
     {
-        return $this->_value;
+        return $this->unit;
     }
 }

@@ -1,0 +1,6 @@
+{
+    "name": "PHP Docker",
+    "dockerFile": "./server/Dockerfile"
+    
+  }
+  

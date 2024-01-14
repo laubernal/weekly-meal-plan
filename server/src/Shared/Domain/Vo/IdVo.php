@@ -18,9 +18,9 @@ class IdVo extends ValueObject
         $this->_value = $value;
     }
 
-    public static function generate(): Id
+    public static function generate(): IdVo
     {
-        return new Id(Uuid::uuid4()->toString());
+        return new IdVo(Uuid::uuid4()->toString());
     }
 
     protected function validate(mixed $value): bool

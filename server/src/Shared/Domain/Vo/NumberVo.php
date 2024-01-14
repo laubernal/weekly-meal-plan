@@ -1,5 +1,7 @@
 <?php
 
+namespace App\Shared\Domain\Vo;
+
 use ValueObject;
 use NumberFormatError;
 
