@@ -1,8 +1,6 @@
 <?php
 
-namespace Shared\Domain\Vo;
-
-use NumberVo;
+namespace App\Shared\Domain\Vo;
 
 class AmountVo extends NumberVo
 {

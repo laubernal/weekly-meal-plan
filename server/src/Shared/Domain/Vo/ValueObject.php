@@ -1,4 +1,5 @@
 <?php
+namespace App\Shared\Domain\Vo;
 
 abstract class ValueObject
 {

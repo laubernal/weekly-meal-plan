@@ -2,8 +2,8 @@
 
 namespace Shared\Domain\Entities;
 
+use App\Shared\Domain\Vo\IdVo;
 use DateTime;
-use IdVo;
 
 class AggregateRoot
 {

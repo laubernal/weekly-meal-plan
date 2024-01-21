@@ -2,8 +2,7 @@
 
 namespace App\Shared\Domain\Vo;
 
-use ValueObject;
-use NumberFormatError;
+use App\Shared\Domain\Error\NumberFormatError;
 
 class NumberVo extends ValueObject
 {

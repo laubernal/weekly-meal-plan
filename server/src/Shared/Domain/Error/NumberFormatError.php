@@ -1,6 +1,7 @@
 <?php
 
-use DomainError;
+namespace App\Shared\Domain\Error;
+
 
 class NumberFormatError extends DomainError
 {

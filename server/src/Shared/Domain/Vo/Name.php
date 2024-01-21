@@ -1,7 +1,8 @@
 <?php
 
-use ValueObject;
-use StringFormatError;
+namespace App\Shared\Domain\Vo;
+
+use App\Shared\Domain\Error\StringFormatError;
 
 class Name extends ValueObject
 {

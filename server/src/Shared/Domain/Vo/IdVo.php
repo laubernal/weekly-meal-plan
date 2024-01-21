@@ -1,9 +1,9 @@
 <?php
 
-use DomainError;
-use ValueObject;
+namespace App\Shared\Domain\Vo;
+
+use App\Shared\Domain\Error\DomainError;
 use Ramsey\Uuid\Uuid;
-use Doctrine\ORM\Mapping\Id;
 
 class IdVo extends ValueObject
 {
