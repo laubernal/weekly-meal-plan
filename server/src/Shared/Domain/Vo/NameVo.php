@@ -4,7 +4,7 @@ namespace App\Shared\Domain\Vo;
 
 use App\Shared\Domain\Error\StringFormatError;
 
-class Name extends ValueObject
+class NameVo extends ValueObject
 {
     private $_value;
 
