@@ -16,7 +16,7 @@ class Meal extends AggregateRoot
      *
      * @param  Food[] $foods
      */
-    public function __construct(IdVo $id, private array $foods, private MealTypeVo $type)
+    public function __construct(private IdVo $id, private array $foods, private MealTypeVo $type)
     {
         parent::__construct($id, new DateTime(), new DateTime());
     }
