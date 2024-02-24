@@ -3,8 +3,8 @@
 namespace App\Menu\Food\Domain\Repository;
 
 use App\Menu\Food\Domain\Food;
+use App\Shared\Domain\Criteria\Criteria;
 use App\Shared\Domain\Repository\IRepository;
-use App\Shared\Domain\Vo\IdVo;
 use Shared\Domain\Entities\AggregateRoot;
 
 interface IFoodRepository extends IRepository
@@ -20,10 +20,10 @@ interface IFoodRepository extends IRepository
     /**
      * @return Food
      */
-    public function findOne(IdVo $id): AggregateRoot;
+    public function findOne(Criteria $criteria): AggregateRoot;
     /**
      * @param Food $entity
      */
     public function update($entity): void;
-    public function delete(IdVo $id): void;
+    public function delete(Criteria $criteria): void;
 }
